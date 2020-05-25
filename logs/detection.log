@@ -1,0 +1,836 @@
+DEBUG:kafka.producer.kafka:Starting the Kafka producer
+DEBUG:kafka.metrics.metrics:Added sensor with name connections-closed
+DEBUG:kafka.metrics.metrics:Added sensor with name connections-created
+DEBUG:kafka.metrics.metrics:Added sensor with name select-time
+DEBUG:kafka.metrics.metrics:Added sensor with name io-time
+DEBUG:kafka.client:Initiating connection to node bootstrap-0 at localhost:9092
+DEBUG:kafka.metrics.metrics:Added sensor with name bytes-sent-received
+DEBUG:kafka.metrics.metrics:Added sensor with name bytes-sent
+DEBUG:kafka.metrics.metrics:Added sensor with name bytes-received
+DEBUG:kafka.metrics.metrics:Added sensor with name request-latency
+DEBUG:kafka.metrics.metrics:Added sensor with name node-bootstrap-0.bytes-sent
+DEBUG:kafka.metrics.metrics:Added sensor with name node-bootstrap-0.bytes-received
+DEBUG:kafka.metrics.metrics:Added sensor with name node-bootstrap-0.latency
+DEBUG:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <disconnected> [unspecified None]>: creating new socket
+DEBUG:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <disconnected> [IPv6 ('::1', 9092, 0, 0)]>: setting socket option (6, 1, 1)
+INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+INFO:kafka.conn:Probing node bootstrap-0 broker version
+DEBUG:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: established TCP connection
+INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+DEBUG:kafka.client:Node bootstrap-0 connected
+DEBUG:kafka.protocol.parser:Sending request ApiVersionRequest_v0()
+DEBUG:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 1: ApiVersionRequest_v0()
+DEBUG:kafka.protocol.parser:Sending request MetadataRequest_v0(topics=[])
+DEBUG:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 2: MetadataRequest_v0(topics=[])
+DEBUG:kafka.protocol.parser:Received correlation id: 1
+DEBUG:kafka.protocol.parser:Processing response ApiVersionResponse_v0
+DEBUG:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 1 (101.4871597290039 ms): ApiVersionResponse_v0(error_code=0, api_versions=[(api_key=0, min_version=0, max_version=6), (api_key=1, min_version=0, max_version=8), (api_key=2, min_version=0, max_version=3), (api_key=3, min_version=0, max_version=6), (api_key=4, min_version=0, max_version=1), (api_key=5, min_version=0, max_version=0), (api_key=6, min_version=0, max_version=4), (api_key=7, min_version=0, max_version=1), (api_key=8, min_version=0, max_version=4), (api_key=9, min_version=0, max_version=4), (api_key=10, min_version=0, max_version=2), (api_key=11, min_version=0, max_version=3), (api_key=12, min_version=0, max_version=2), (api_key=13, min_version=0, max_version=2), (api_key=14, min_version=0, max_version=2), (api_key=15, min_version=0, max_version=2), (api_key=16, min_version=0, max_version=2), (api_key=17, min_version=0, max_version=1), (api_key=18, min_version=0, max_version=2), (api_key=19, min_version=0, max_version=3), (api_key=20, min_version=0, max_version=2), (api_key=21, min_version=0, max_version=1), (api_key=22, min_version=0, max_version=1), (api_key=23, min_version=0, max_version=1), (api_key=24, min_version=0, max_version=1), (api_key=25, min_version=0, max_version=1), (api_key=26, min_version=0, max_version=1), (api_key=27, min_version=0, max_version=0), (api_key=28, min_version=0, max_version=1), (api_key=29, min_version=0, max_version=1), (api_key=30, min_version=0, max_version=1), (api_key=31, min_version=0, max_version=1), (api_key=32, min_version=0, max_version=2), (api_key=33, min_version=0, max_version=1), (api_key=34, min_version=0, max_version=1), (api_key=35, min_version=0, max_version=1), (api_key=36, min_version=0, max_version=0), (api_key=37, min_version=0, max_version=1), (api_key=38, min_version=0, max_version=1), (api_key=39, min_version=0, max_version=1), (api_key=40, min_version=0, max_version=1), (api_key=41, min_version=0, max_version=1), (api_key=42, min_version=0, max_version=1)])
+DEBUG:kafka.protocol.parser:Received correlation id: 2
+DEBUG:kafka.protocol.parser:Processing response MetadataResponse_v0
+DEBUG:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 2 (3.821849822998047 ms): MetadataResponse_v0(brokers=[(node_id=1001, host='localhost', port=9092)], topics=[(error_code=0, topic='testY', partitions=[(error_code=0, partition=0, leader=1001, replicas=[1001], isr=[1001])]), (error_code=0, topic='__consumer_offsets', partitions=[(error_code=0, partition=23, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=41, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=32, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=8, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=17, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=44, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=35, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=26, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=11, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=29, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=38, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=47, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=20, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=2, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=5, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=14, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=46, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=49, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=40, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=4, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=13, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=22, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=31, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=16, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=7, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=43, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=25, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=34, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=10, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=37, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=1, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=19, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=28, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=45, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=36, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=27, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=9, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=18, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=21, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=48, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=12, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=3, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=30, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=39, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=15, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=42, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=24, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=33, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=6, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=0, leader=1001, replicas=[1001], isr=[1001])]), (error_code=0, topic='DNS', partitions=[(error_code=0, partition=0, leader=1001, replicas=[1001], isr=[1001])]), (error_code=0, topic='test', partitions=[(error_code=0, partition=0, leader=1001, replicas=[1001], isr=[1001])])])
+INFO:kafka.conn:Broker version identified as 1.0.0
+INFO:kafka.conn:Set configuration api_version=(1, 0, 0) to skip auto check_version requests on startup
+DEBUG:kafka.metrics.metrics:Added sensor with name bufferpool-wait-time
+DEBUG:kafka.metrics.metrics:Added sensor with name batch-size
+DEBUG:kafka.metrics.metrics:Added sensor with name compression-rate
+DEBUG:kafka.metrics.metrics:Added sensor with name queue-time
+DEBUG:kafka.metrics.metrics:Added sensor with name produce-throttle-time
+DEBUG:kafka.metrics.metrics:Added sensor with name records-per-request
+DEBUG:kafka.metrics.metrics:Added sensor with name bytes
+DEBUG:kafka.metrics.metrics:Added sensor with name record-retries
+DEBUG:kafka.metrics.metrics:Added sensor with name errors
+DEBUG:kafka.metrics.metrics:Added sensor with name record-size-max
+DEBUG:kafka.producer.sender:Starting Kafka producer I/O thread.
+DEBUG:kafka.client:Sending metadata request MetadataRequest_v1(topics=NULL) to node bootstrap-0
+DEBUG:kafka.producer.kafka:Kafka producer started
+DEBUG:kafka.protocol.parser:Sending request MetadataRequest_v1(topics=NULL)
+INFO:root:Producer Initialised.
+DEBUG:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 3: MetadataRequest_v1(topics=NULL)
+DEBUG:kafka.producer.kafka:Requesting metadata update for topic test
+DEBUG:kafka.protocol.parser:Received correlation id: 3
+DEBUG:kafka.protocol.parser:Processing response MetadataResponse_v1
+DEBUG:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 3 (4.7760009765625 ms): MetadataResponse_v1(brokers=[(node_id=1001, host='localhost', port=9092, rack=None)], controller_id=1001, topics=[(error_code=0, topic='testY', is_internal=False, partitions=[(error_code=0, partition=0, leader=1001, replicas=[1001], isr=[1001])]), (error_code=0, topic='__consumer_offsets', is_internal=True, partitions=[(error_code=0, partition=23, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=41, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=32, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=8, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=17, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=44, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=35, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=26, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=11, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=29, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=38, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=47, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=20, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=2, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=5, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=14, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=46, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=49, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=40, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=4, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=13, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=22, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=31, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=16, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=7, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=43, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=25, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=34, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=10, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=37, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=1, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=19, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=28, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=45, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=36, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=27, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=9, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=18, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=21, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=48, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=12, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=3, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=30, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=39, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=15, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=42, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=24, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=33, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=6, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=0, leader=1001, replicas=[1001], isr=[1001])]), (error_code=0, topic='DNS', is_internal=False, partitions=[(error_code=0, partition=0, leader=1001, replicas=[1001], isr=[1001])]), (error_code=0, topic='test', is_internal=False, partitions=[(error_code=0, partition=0, leader=1001, replicas=[1001], isr=[1001])])])
+DEBUG:kafka.cluster:Updated cluster metadata to ClusterMetadata(brokers: 1, topics: 4, groups: 0)
+DEBUG:kafka.producer.kafka:_wait_on_metadata woke after 0.005861043930053711 secs.
+DEBUG:kafka.producer.kafka:Sending (key=None value={'test': 'hello'} headers=[]) to TopicPartition(topic='test', partition=0)
+DEBUG:kafka.producer.record_accumulator:Allocating a new 16384 byte message buffer for TopicPartition(topic='test', partition=0)
+DEBUG:kafka.producer.kafka:Waking up the sender since TopicPartition(topic='test', partition=0) is either full or getting a new batch
+DEBUG:kafka.producer.sender:Node 1001 not ready; delaying produce of accumulated batch
+DEBUG:kafka.client:Initiating connection to node 1001 at localhost:9092
+DEBUG:kafka.metrics.metrics:Added sensor with name connections-closed
+DEBUG:kafka.metrics.metrics:Added sensor with name node-1001.bytes-sent
+DEBUG:kafka.metrics.metrics:Added sensor with name connections-created
+DEBUG:kafka.metrics.metrics:Added sensor with name node-1001.bytes-received
+DEBUG:kafka.metrics.metrics:Added sensor with name select-time
+DEBUG:kafka.metrics.metrics:Added sensor with name node-1001.latency
+DEBUG:kafka.metrics.metrics:Added sensor with name io-time
+DEBUG:kafka.client:Initiating connection to node bootstrap-0 at localhost:9092
+DEBUG:kafka.metrics.metrics:Added sensor with name bytes-sent-received
+DEBUG:kafka.metrics.metrics:Added sensor with name bytes-sent
+DEBUG:kafka.metrics.metrics:Added sensor with name bytes-received
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <disconnected> [unspecified None]>: creating new socket
+DEBUG:kafka.metrics.metrics:Added sensor with name request-latency
+DEBUG:kafka.metrics.metrics:Added sensor with name node-bootstrap-0.bytes-sent
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <disconnected> [IPv6 ('::1', 9092, 0, 0)]>: setting socket option (6, 1, 1)
+DEBUG:kafka.metrics.metrics:Added sensor with name node-bootstrap-0.bytes-received
+INFO:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+DEBUG:kafka.metrics.metrics:Added sensor with name node-bootstrap-0.latency
+DEBUG:kafka.producer.sender:Node 1001 not ready; delaying produce of accumulated batch
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: established TCP connection
+INFO:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+DEBUG:kafka.client:Node 1001 connected
+DEBUG:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <disconnected> [unspecified None]>: creating new socket
+INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
+DEBUG:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <disconnected> [IPv6 ('::1', 9092, 0, 0)]>: setting socket option (6, 1, 1)
+INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+INFO:kafka.conn:Probing node bootstrap-0 broker version
+DEBUG:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: established TCP connection
+INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+DEBUG:kafka.client:Node bootstrap-0 connected
+DEBUG:kafka.protocol.parser:Sending request ApiVersionRequest_v0()
+DEBUG:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 1: ApiVersionRequest_v0()
+DEBUG:kafka.metrics.metrics:Added sensor with name topic.test.records-per-batch
+DEBUG:kafka.metrics.metrics:Added sensor with name topic.test.bytes
+DEBUG:kafka.metrics.metrics:Added sensor with name topic.test.compression-rate
+DEBUG:kafka.metrics.metrics:Added sensor with name topic.test.record-retries
+DEBUG:kafka.metrics.metrics:Added sensor with name topic.test.record-errors
+DEBUG:kafka.producer.sender:Nodes with data ready to send: {1001}
+DEBUG:kafka.protocol.parser:Sending request MetadataRequest_v0(topics=[])
+DEBUG:kafka.producer.sender:Created 1 produce requests: {1001: ProduceRequest_v3(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='test', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00I\x00\x00\x00\x00\x02\xb6\xa6=\x1a\x00\x00\x00\x00\x00\x00\x00\x00\x01rH\x9at\x19\x00\x00\x01rH\x9at\x19\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01.\x00\x00\x00\x01"{"test": "hello"}\x00')])])}
+DEBUG:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 2: MetadataRequest_v0(topics=[])
+DEBUG:kafka.producer.sender:Sending Produce Request: ProduceRequest_v3(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='test', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00I\x00\x00\x00\x00\x02\xb6\xa6=\x1a\x00\x00\x00\x00\x00\x00\x00\x00\x01rH\x9at\x19\x00\x00\x01rH\x9at\x19\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01.\x00\x00\x00\x01"{"test": "hello"}\x00')])])
+DEBUG:kafka.protocol.parser:Sending request ProduceRequest_v3(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='test', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00I\x00\x00\x00\x00\x02\xb6\xa6=\x1a\x00\x00\x00\x00\x00\x00\x00\x00\x01rH\x9at\x19\x00\x00\x01rH\x9at\x19\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01.\x00\x00\x00\x01"{"test": "hello"}\x00')])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 1: ProduceRequest_v3(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='test', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00I\x00\x00\x00\x00\x02\xb6\xa6=\x1a\x00\x00\x00\x00\x00\x00\x00\x00\x01rH\x9at\x19\x00\x00\x01rH\x9at\x19\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01.\x00\x00\x00\x01"{"test": "hello"}\x00')])])
+DEBUG:kafka.protocol.parser:Received correlation id: 1
+DEBUG:kafka.protocol.parser:Processing response ApiVersionResponse_v0
+DEBUG:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 1 (107.81693458557129 ms): ApiVersionResponse_v0(error_code=0, api_versions=[(api_key=0, min_version=0, max_version=6), (api_key=1, min_version=0, max_version=8), (api_key=2, min_version=0, max_version=3), (api_key=3, min_version=0, max_version=6), (api_key=4, min_version=0, max_version=1), (api_key=5, min_version=0, max_version=0), (api_key=6, min_version=0, max_version=4), (api_key=7, min_version=0, max_version=1), (api_key=8, min_version=0, max_version=4), (api_key=9, min_version=0, max_version=4), (api_key=10, min_version=0, max_version=2), (api_key=11, min_version=0, max_version=3), (api_key=12, min_version=0, max_version=2), (api_key=13, min_version=0, max_version=2), (api_key=14, min_version=0, max_version=2), (api_key=15, min_version=0, max_version=2), (api_key=16, min_version=0, max_version=2), (api_key=17, min_version=0, max_version=1), (api_key=18, min_version=0, max_version=2), (api_key=19, min_version=0, max_version=3), (api_key=20, min_version=0, max_version=2), (api_key=21, min_version=0, max_version=1), (api_key=22, min_version=0, max_version=1), (api_key=23, min_version=0, max_version=1), (api_key=24, min_version=0, max_version=1), (api_key=25, min_version=0, max_version=1), (api_key=26, min_version=0, max_version=1), (api_key=27, min_version=0, max_version=0), (api_key=28, min_version=0, max_version=1), (api_key=29, min_version=0, max_version=1), (api_key=30, min_version=0, max_version=1), (api_key=31, min_version=0, max_version=1), (api_key=32, min_version=0, max_version=2), (api_key=33, min_version=0, max_version=1), (api_key=34, min_version=0, max_version=1), (api_key=35, min_version=0, max_version=1), (api_key=36, min_version=0, max_version=0), (api_key=37, min_version=0, max_version=1), (api_key=38, min_version=0, max_version=1), (api_key=39, min_version=0, max_version=1), (api_key=40, min_version=0, max_version=1), (api_key=41, min_version=0, max_version=1), (api_key=42, min_version=0, max_version=1)])
+DEBUG:kafka.protocol.parser:Received correlation id: 2
+DEBUG:kafka.protocol.parser:Processing response MetadataResponse_v0
+DEBUG:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 2 (3.9641857147216797 ms): MetadataResponse_v0(brokers=[(node_id=1001, host='localhost', port=9092)], topics=[(error_code=0, topic='testY', partitions=[(error_code=0, partition=0, leader=1001, replicas=[1001], isr=[1001])]), (error_code=0, topic='__consumer_offsets', partitions=[(error_code=0, partition=23, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=41, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=32, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=8, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=17, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=44, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=35, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=26, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=11, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=29, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=38, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=47, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=20, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=2, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=5, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=14, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=46, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=49, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=40, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=4, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=13, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=22, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=31, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=16, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=7, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=43, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=25, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=34, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=10, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=37, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=1, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=19, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=28, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=45, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=36, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=27, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=9, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=18, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=21, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=48, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=12, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=3, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=30, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=39, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=15, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=42, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=24, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=33, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=6, leader=1001, replicas=[1001], isr=[1001]), (error_code=0, partition=0, leader=1001, replicas=[1001], isr=[1001])]), (error_code=0, topic='DNS', partitions=[(error_code=0, partition=0, leader=1001, replicas=[1001], isr=[1001])]), (error_code=0, topic='test', partitions=[(error_code=0, partition=0, leader=1001, replicas=[1001], isr=[1001])])])
+INFO:kafka.conn:Broker version identified as 1.0.0
+DEBUG:kafka.protocol.parser:Received correlation id: 1
+INFO:kafka.conn:Set configuration api_version=(1, 0, 0) to skip auto check_version requests on startup
+DEBUG:kafka.protocol.parser:Processing response ProduceResponse_v3
+DEBUG:kafka.metrics.metrics:Added sensor with name bytes-fetched
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 1 (4.924297332763672 ms): ProduceResponse_v3(topics=[(topic='test', partitions=[(partition=0, error_code=0, offset=32, timestamp=-1)])], throttle_time_ms=0)
+DEBUG:kafka.metrics.metrics:Added sensor with name records-fetched
+DEBUG:kafka.producer.sender:Parsing produce response: ProduceResponse_v3(topics=[(topic='test', partitions=[(partition=0, error_code=0, offset=32, timestamp=-1)])], throttle_time_ms=0)
+DEBUG:kafka.metrics.metrics:Added sensor with name fetch-latency
+DEBUG:kafka.producer.record_accumulator:Produced messages to topic-partition TopicPartition(topic='test', partition=0) with base offset 32 and error None.
+DEBUG:kafka.metrics.metrics:Added sensor with name records-lag
+DEBUG:kafka.metrics.metrics:Added sensor with name fetch-throttle-time
+DEBUG:kafka.metrics.metrics:Added sensor with name heartbeat-latency
+DEBUG:kafka.metrics.metrics:Added sensor with name join-latency
+DEBUG:kafka.metrics.metrics:Added sensor with name sync-latency
+WARNING:kafka.coordinator.consumer:group_id is None: disabling auto-commit.
+DEBUG:kafka.metrics.metrics:Added sensor with name commit-latency
+INFO:kafka.consumer.subscription_state:Updating subscribed topics to: ('test', 'test')
+DEBUG:kafka.client:Sending metadata request MetadataRequest_v1(topics=['test']) to node bootstrap-0
+DEBUG:kafka.protocol.parser:Sending request MetadataRequest_v1(topics=['test'])
+DEBUG:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 3: MetadataRequest_v1(topics=['test'])
+DEBUG:kafka.protocol.parser:Received correlation id: 3
+DEBUG:kafka.protocol.parser:Processing response MetadataResponse_v1
+DEBUG:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 3 (8.736133575439453 ms): MetadataResponse_v1(brokers=[(node_id=1001, host='localhost', port=9092, rack=None)], controller_id=1001, topics=[(error_code=0, topic='test', is_internal=False, partitions=[(error_code=0, partition=0, leader=1001, replicas=[1001], isr=[1001])])])
+DEBUG:kafka.cluster:Updated cluster metadata to ClusterMetadata(brokers: 1, topics: 1, groups: 0)
+INFO:kafka.consumer.subscription_state:Updated partition assignment: [TopicPartition(topic='test', partition=0)]
+DEBUG:kafka.consumer.fetcher:Resetting offset for partition TopicPartition(topic='test', partition=0) to latest offset.
+DEBUG:kafka.client:Initiating connection to node 1001 at localhost:9092
+DEBUG:kafka.metrics.metrics:Added sensor with name node-1001.bytes-sent
+DEBUG:kafka.metrics.metrics:Added sensor with name node-1001.bytes-received
+DEBUG:kafka.metrics.metrics:Added sensor with name node-1001.latency
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <disconnected> [unspecified None]>: creating new socket
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <disconnected> [IPv6 ('::1', 9092, 0, 0)]>: setting socket option (6, 1, 1)
+INFO:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: established TCP connection
+INFO:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+DEBUG:kafka.client:Node 1001 connected
+INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
+DEBUG:kafka.protocol.parser:Sending request OffsetRequest_v1(replica_id=-1, topics=[(topic='test', partitions=[(partition=0, timestamp=-1)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 1: OffsetRequest_v1(replica_id=-1, topics=[(topic='test', partitions=[(partition=0, timestamp=-1)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 1
+DEBUG:kafka.protocol.parser:Processing response OffsetResponse_v1
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 1 (3.2482147216796875 ms): OffsetResponse_v1(topics=[(topic='test', partitions=[(partition=0, error_code=0, timestamp=-1, offset=33)])])
+DEBUG:kafka.consumer.fetcher:Handling ListOffsetResponse response for TopicPartition(topic='test', partition=0). Fetched offset 33, timestamp -1
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 2: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 2
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 2 (506.2251091003418 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.metrics.metrics:Added sensor with name topic.test.bytes-fetched
+DEBUG:kafka.metrics.metrics:Added sensor with name topic.test.records-fetched
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 3: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 3
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 3 (504.4569969177246 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 4: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 4
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 4 (504.0700435638428 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 5: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 5
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 5 (506.52599334716797 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 6: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 6
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 6 (505.68389892578125 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 7: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 7
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 7 (504.11319732666016 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 8: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 8
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 8 (507.246732711792 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 9: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 9
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 9 (505.19394874572754 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 10: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 10
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 10 (502.5820732116699 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 11: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 11
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 11 (502.76827812194824 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 12: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 12
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 12 (503.66902351379395 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 13: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 13
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 13 (504.23312187194824 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 14: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 14
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 14 (503.13878059387207 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 15: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 15
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 15 (503.0357837677002 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 16: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 16
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 16 (503.13401222229004 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 17: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 17
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 17 (507.01022148132324 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 18: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 18
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 18 (503.8480758666992 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 19: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 19
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 19 (505.7809352874756 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 20: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 20
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 20 (506.3591003417969 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 21: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 21
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 21 (504.1358470916748 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 22: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 22
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 22 (503.6430358886719 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 23: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 23
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 23 (504.51111793518066 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 24: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 24
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 24 (504.35590744018555 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 25: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 25
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 25 (504.9889087677002 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 26: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 26
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 26 (503.978967666626 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 27: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 27
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 27 (506.53624534606934 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 28: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 28
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 28 (503.3552646636963 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 29: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 29
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 29 (502.84385681152344 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 30: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 30
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 30 (505.723237991333 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 31: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 31
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 31 (505.41210174560547 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 32: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 32
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 32 (503.22508811950684 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 33: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 33
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 33 (503.0970573425293 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 34: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 34
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 34 (504.06503677368164 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 35: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 35
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 35 (502.1848678588867 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 36: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 36
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 36 (503.8940906524658 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 37: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 37
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 37 (504.05383110046387 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 38: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 38
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 38 (504.09412384033203 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 39: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 39
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 39 (503.20911407470703 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 40: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 40
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 40 (506.9580078125 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 41: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 41
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 41 (503.5851001739502 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 42: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 42
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 42 (505.50389289855957 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 43: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 43
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 43 (503.74603271484375 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 44: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 44
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 44 (505.8720111846924 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 45: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 45
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 45 (504.305362701416 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 46: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 46
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 46 (504.7919750213623 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 47: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 47
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 47 (503.10301780700684 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 48: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 48
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 48 (504.7013759613037 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 49: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 49
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 49 (502.03990936279297 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 50: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 50
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 50 (503.61084938049316 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 51: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 51
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 51 (502.67815589904785 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 52: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 52
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 52 (503.68404388427734 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 53: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 53
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 53 (502.5899410247803 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 54: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 54
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 54 (502.9301643371582 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 55: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 55
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 55 (503.54504585266113 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 56: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 56
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 56 (506.66308403015137 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 57: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 57
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 57 (502.51317024230957 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 58: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 58
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 58 (504.3008327484131 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 59: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 59
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 59 (502.4881362915039 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 60: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 60
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 60 (505.5830478668213 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 61: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 61
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 61 (503.953218460083 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 62: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 62
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 62 (504.3981075286865 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=33, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 33
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 63: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=33, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 63
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 63 (14.626741409301758 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=34, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'\x00\x00\x00\x00\x00\x00\x00!\x00\x00\x00:\x00\x00\x00\x00\x02\x9d\x81\xab\x85\x00\x00\x00\x00\x00\x00\x00\x00\x01rH\x9a\xe9\xe5\x00\x00\x01rH\x9a\xe9\xe5\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\x10\x00\x00\x00\x01\x04hi\x00')])])
+DEBUG:kafka.consumer.fetcher:Adding fetched record for partition TopicPartition(topic='test', partition=0) with offset 33 to buffered record list
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 34
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=34, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 64: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=34, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 64
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 64 (503.71503829956055 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=34, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 34
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=34, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 65: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=34, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 65
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 65 (503.0839443206787 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=34, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 34
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=34, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 66: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=34, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 66
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 66 (502.01892852783203 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=34, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 34
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=34, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 67: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=34, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 67
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 67 (503.0779838562012 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=34, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 34
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=34, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 68: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=34, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 68
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 68 (502.9020309448242 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=34, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 34
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=34, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 69: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=34, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 69
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 69 (503.5679340362549 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=34, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 34
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=34, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 70: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=34, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 70
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 70 (502.0890235900879 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=34, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 34
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=34, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 71: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=34, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 71
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 71 (503.82399559020996 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=34, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 34
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=34, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 72: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=34, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 72
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 72 (502.8350353240967 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=34, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 34
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=34, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 73: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=34, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 73
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 73 (503.36217880249023 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=34, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 34
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=34, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 74: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=34, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 74
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 74 (502.14600563049316 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=34, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 34
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=34, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 75: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=34, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 75
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 75 (502.89106369018555 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=34, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 34
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=34, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 76: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=34, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 76
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 76 (502.2909641265869 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=34, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 34
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=34, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 77: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=34, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 77
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 77 (368.55125427246094 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=35, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'\x00\x00\x00\x00\x00\x00\x00"\x00\x00\x00:\x00\x00\x00\x00\x02\xce\x97\x04H\x00\x00\x00\x00\x00\x00\x00\x00\x01rH\x9b\x04\xe5\x00\x00\x01rH\x9b\x04\xe5\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\x10\x00\x00\x00\x01\x04ip\x00')])])
+DEBUG:kafka.consumer.fetcher:Adding fetched record for partition TopicPartition(topic='test', partition=0) with offset 34 to buffered record list
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 35
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=35, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 78: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=35, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 78
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 78 (502.67624855041504 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=35, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 35
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=35, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 79: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=35, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 79
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 79 (505.9630870819092 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=35, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 35
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=35, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 80: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=35, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 80
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 80 (503.48711013793945 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=35, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 35
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=35, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 81: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=35, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 81
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 81 (502.0139217376709 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=35, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 35
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=35, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 82: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=35, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 82
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 82 (502.8688907623291 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=35, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 35
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=35, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 83: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=35, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 83
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 83 (502.2437572479248 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=35, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 35
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=35, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 84: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=35, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 84
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 84 (502.46596336364746 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=35, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 35
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=35, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 85: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=35, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 85
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 85 (503.77893447875977 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=35, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 35
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=35, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 86: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=35, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 86
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 86 (501.85394287109375 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=35, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 35
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=35, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 87: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=35, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 87
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 87 (503.29017639160156 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=35, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 35
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=35, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 88: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=35, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 88
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 88 (503.2799243927002 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=35, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 35
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=35, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 89: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=35, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 89
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 89 (503.0660629272461 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=35, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 35
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=35, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 90: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=35, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 90
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 90 (503.0338764190674 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=35, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 35
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=35, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 91: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=35, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 91
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 91 (502.50792503356934 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=35, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 35
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=35, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 92: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=35, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 92
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 92 (502.4378299713135 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=35, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 35
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=35, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 93: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=35, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 93
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 93 (503.0357837677002 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=35, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 35
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=35, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 94: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=35, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 94
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 94 (502.7163028717041 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=35, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 35
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=35, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 95: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=35, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 95
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 95 (503.3750534057617 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=35, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 35
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=35, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 96: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=35, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 96
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 96 (502.75707244873047 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=35, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 35
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=35, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 97: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=35, max_bytes=1048576)])])
+DEBUG:kafka.protocol.parser:Received correlation id: 97
+DEBUG:kafka.protocol.parser:Processing response FetchResponse_v4
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Response 97 (502.41923332214355 ms): FetchResponse_v4(throttle_time_ms=0, topics=[(topics='test', partitions=[(partition=0, error_code=0, highwater_offset=35, last_stable_offset=-1, aborted_transactions=NULL, message_set=b'')])])
+DEBUG:kafka.consumer.fetcher:Adding fetch request for partition TopicPartition(topic='test', partition=0) at offset 35
+DEBUG:kafka.consumer.fetcher:Sending FetchRequest to node 1001
+DEBUG:kafka.protocol.parser:Sending request FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=35, max_bytes=1048576)])])
+DEBUG:kafka.conn:<BrokerConnection node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]> Request 98: FetchRequest_v4(replica_id=-1, max_wait_time=500, min_bytes=1, max_bytes=52428800, isolation_level=0, topics=[(topic='test', partitions=[(partition=0, offset=35, max_bytes=1048576)])])
+INFO:kafka.producer.kafka:Closing the Kafka producer with 0 secs timeout.
+INFO:kafka.producer.kafka:Proceeding to force close the producer since pending requests could not be completed within timeout 0.
+DEBUG:kafka.producer.kafka:The Kafka producer has closed.
