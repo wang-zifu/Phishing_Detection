@@ -1,6 +1,8 @@
 from processing.features import LayerOneExtraction
 from processing.data import Data
 
+from sklearn.preprocessing import StandardScaler
+
 class PreProcessing(Data):
     def __init__(self, data):
         Data.__init__(self, data)
@@ -13,6 +15,11 @@ class PreProcessing(Data):
             self._data = None
         return self._data
     
+    def scale_observations(self, observations_dataframe):
+        scaler = StandardScaler()
+        observations_dataframe_scaled = scaler.transform(observations_dataframe)
+        return observations_dataframe_scaled
+
     def extraction(self):
         valid_data = self._check_observation()
         if not valid_data:
@@ -36,3 +43,5 @@ class PreProcessing(Data):
             top_level_domain=top_level_domain
         )
         return observations_dataframe
+
+    
