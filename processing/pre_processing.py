@@ -2,6 +2,7 @@ from processing.features import LayerOneExtraction
 from processing.data import Data
 
 from sklearn.preprocessing import StandardScaler
+from sklearn.model_selection import train_test_split
 
 class PreProcessing(Data):
     def __init__(self, data):
@@ -14,11 +15,6 @@ class PreProcessing(Data):
         if self._data.isnumeric():
             self._data = None
         return self._data
-    
-    def scale_observations(self, observations_dataframe):
-        scaler = StandardScaler()
-        observations_dataframe_scaled = scaler.transform(observations_dataframe)
-        return observations_dataframe_scaled
 
     def extraction(self):
         valid_data = self._check_observation()
@@ -32,16 +28,18 @@ class PreProcessing(Data):
         top_level_domain_length = layer_one_process.top_level_domain_length()
         second_level_domain_length = layer_one_process.second_level_domain_length()
         num_dots = layer_one_process.num_dots()
-        top_level_domain = layer_one_process.top_level_domain()
 
-        observations_dataframe = self.get_dataframe(
+        self.observations_dataframe = self.get_dataframe(
             domain_length=domain_length,
             percentage_numeric=percentage_numeric,
             top_level_domain_length=top_level_domain_length,
             second_level_domain_length=second_level_domain_length,
-            num_dots=num_dots,
-            top_level_domain=top_level_domain
-        )
-        return observations_dataframe
-
+            num_dots=num_dots
+            )
+        return self.observations_dataframe
     
+    @staticmethod
+    def data_split(dataset_train_columns, dataset_labels):
+        X_train, X_test, Y_train, Y_test = train_test_split(
+            dataset_train_columns, dataset_labels, test_size=0.05, shuffle=True)
+        return X_train, X_test, Y_train, Y_test

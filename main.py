@@ -17,30 +17,34 @@ def main():
     #     print(msg.value.decode())
     
     # Load a trained machine learning model 
-    level_one_model = Model(model_name='./detection/models/layer_one_model').read_model()
-
+    layer_one_model = Model(layer=1, model_name='./detection/models/layer_one_model')
+    if layer_one_model.read_model() == 0:
+        logging.warning('Training a model')
+        layer_one_model.train_controller()
+    
     # Data
-    data = 'hi.google2.com'
+    data = 'google.com'
 
     # Level One Feature Extraction
     pre_processing = PreProcessing(data)
-    pre_processed_data_DF = pre_processing.extraction()
-    
-    if not isinstance(pre_processed_data_DF, pd.DataFrame):
+    processed_data = pre_processing.extraction()
+    if not isinstance(processed_data, pd.DataFrame):
         logging.warning("Error Processing Observations.")
-    print(pre_processed_data_DF)
     
-    # Scale the data for machine learning 
-    scaled_processed_data = pre_processing.scale_observations(pre_processed_data_DF)
-    
+    processed_data_ = layer_one_model.scale(processed_data)
+    print(processed_data_)
     # Layer One Predictions
-    level_1_predictions, probabilities = layer_one_model.prediction(scaled_processed_data[[
-            'domain_length', 
-            'percentage_numeric', 
-            'top_level_domain_length', 
-            'second_level_domain_length', 
-            'num_dots', 'top_level_domain']])
+    level_1_predictions, probabilities = layer_one_model.prediction(processed_data_)
+    print(level_1_predictions, probabilities)
 
+    from sklearn.metrics import classification_report,confusion_matrix
+    from sklearn import metrics
+    test_pred, proabilities = layer_one_model.prediction(layer_one_model.scale(layer_one_model.X_test))
+    print(confusion_matrix(layer_one_model.Y_test,test_pred))
+    print("Accuracy: %.2f" % (metrics.accuracy_score(layer_one_model.Y_test, test_pred)))
+    print("Precision: %.2f" % (metrics.precision_score(layer_one_model.Y_test, test_pred)))
+    print("Recall: %.2f" % (metrics.recall_score(layer_one_model.Y_test, test_pred)))
+    print("F1-Score: %.2f" % (metrics.f1_score(layer_one_model.Y_test, test_pred)))
 
 
 if __name__ == "__main__":

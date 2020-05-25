@@ -46,8 +46,3 @@ class LayerOneExtraction(Features):
         if count == 0:
             return count 
         return count - 1
-    
-    def top_level_domain(self) -> str:
-        """ top-level domain '.com' """
-        tld = self.data.split('.')[-1]
-        return tld
