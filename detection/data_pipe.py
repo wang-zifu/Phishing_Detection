@@ -3,7 +3,7 @@ import json
 import logging
 
 class DataPipe:
-    def __init__(self, server):
+    def __init__(self, server="localhost:9092"):
         """ Initialise a detection 
         Args:
             server (string): The IP address and port of the Kafka Broker

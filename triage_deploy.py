@@ -33,5 +33,3 @@ def triage_deployement():
                 'probabilities_malicious': prob_phish,
                 'domain': domain,
                 'triage': 1})
-
-triage_deployement()
