@@ -1,35 +1,20 @@
 from detection.data_pipe import DataPipe
 from processing.pre_processing import PreProcessing
 from detection.machine_learning import Model
-from detection.triage import Triage
+from triage_deploy import triage_deployement
 import pandas as pd
 import logging
 import os 
 
-def config_check():
+def config_check(server):
     deployement_style = os.environ.get('MACHINE_TYPE')
     if deployement_style == 0:
-        pass
+        triage_deployement(server)
     elif deployement_style == 1:
         pass
     elif deployement_style == 2:
         pass
-
-def triage_deployement(server):
-    # Consume Predictions
-    core_decision_consumer = pipeline.get_consumer('test_core', 'test')
-    # Make decision using default threshold [0.40, 0.60]
-    triage = Triage()
-    for data in core_decision_consumer:
-        data = data.value.decode()
-        decision = triage.decision_maker()
-    # Produce
-    pipeline = DataPipe(server)
-    pipeline.set_producer()
-    # Produce to layer_one_output
-    # OR
-    # Produce to layer_two_output
-    pass
+    
 
 def main():
     # LogConfig.set_logging_config('detection.log')

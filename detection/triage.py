@@ -2,7 +2,7 @@ from detection.data_pipe import DataPipe
 
 
 class Triage(DataPipe):
-    def __init__(self, threshold=[0.40, 0.60]):
+    def __init__(self, threshold=[0.13, 0.87]):
         DataPipe.__init__(self, "localhost:9092")
         self.threshold_ben = threshold[0]
         self.threshold_phish = threshold[1]
