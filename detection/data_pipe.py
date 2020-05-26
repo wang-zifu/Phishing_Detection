@@ -24,5 +24,7 @@ class DataPipe:
 
     def get_consumer(self, topic, groupID):
         """ Consume data from a Kafka Topic """
-        consumer = KafkaConsumer(topic, group_id=groupID)
+        consumer = KafkaConsumer(topic, 
+            group_id=groupID, 
+            value_deserializer=lambda values: json.loads(values.decode('utf-8')))
         return consumer
