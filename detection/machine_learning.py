@@ -6,7 +6,7 @@ from sklearn.neural_network import MLPClassifier
 import pandas as pd 
 
 layer_one_columns = ['dLength', 'domainNumChar', 'lengthTLD', 'lengthSLD', 'numTokenWord']
-layer_two_columns = ['creation_date', 'registrar_name', 'delta', 'count_of_requests', 'count_of_responses', 'ttl', 'length_response']
+layer_two_columns = ['creation_date', 'ttl', 'length_response']
 class Model:
     def __init__(self, layer, threshold=None, model_name=None):
         """ Initialise a detection 
@@ -30,8 +30,13 @@ class Model:
 
     def train_controller(self):
         """ Train a model if an existing one does not exist """
-        self.dataset = pd.read_csv('./detection/google.csv')
+        self.dataset = pd.read_csv('./detection/google_updated.csv')
         self.dataset_labels = self.dataset[['label']]
+        # Needs fix 
+        self.dataset.loc[self.dataset['creation_date'] == 'None'] = 0
+        self.dataset.loc[self.dataset['creation_date'] == 'befo'] = 0
+        self.dataset.loc[self.dataset['creation_date'] == 'Befo'] = 0
+        self.dataset.loc[self.dataset['creation_date'] == '0-UA'] = 0
 
         if self.layer == 1:
             self.dataset_train_columns = self.dataset[layer_one_columns]
@@ -40,7 +45,7 @@ class Model:
         elif self.layer == 2:
             self.dataset_train_columns = self.dataset[layer_two_columns]
             X_train, X_test, Y_train, Y_test = PreProcessing.data_split(self.dataset_train_columns, self.dataset_labels)
-            self.trained_model = self.model_train(X_train, Y_train, 7)
+            self.trained_model = self.model_train(X_train, Y_train, 3)
         logging.warning('Model training is complete.')
 
     def model_train(self, X_train, Y_train, size):

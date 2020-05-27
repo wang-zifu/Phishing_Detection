@@ -1,5 +1,5 @@
 from triage_deploy import triage_deployement
-from layer_one_deploy import layer_one_deploy
+from layer_deploy import layer_deploy
 import os 
 
 def config_check():
@@ -9,7 +9,10 @@ def config_check():
         triage_deployement()
 
     elif deployement_style == 1:
-        layer_one_deploy()
+        layer_deploy(
+            layer = 1,
+            consumer_t = 'test_DNS',
+            producer_t = 'test_triage')
 
     elif deployement_style == 2:
         pass
@@ -17,7 +20,10 @@ def config_check():
 
 def main():
     # config_check()
-    layer_one_deploy()
+    layer_deploy(
+            layer = 2,
+            consumer_t = 'DNS',
+            producer_t = 'test_triage')
         
 
 
