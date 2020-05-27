@@ -21,16 +21,13 @@ def config_check():
     elif deployement_style == 2:
         layer_deploy(
             layer = 2,
-            consumer_t = ''
+            consumer_t = 'test_layer_two',
+            producer_t = 'test_output'
         )
     
 
 def main():
-    # config_check()
-    layer_deploy(
-            layer = 2,
-            consumer_t = 'DNS',
-            producer_t = 'test_triage')
+    config_check()
         
 
 

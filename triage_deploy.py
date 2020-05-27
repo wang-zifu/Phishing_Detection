@@ -1,9 +1,9 @@
 from detection.triage import Triage
 
-def triage_deployement():
+def triage_deployement(consumer_t, producer_t_inside_boundary, producer_t_outside_boundary):
     triage = Triage()
     # Consume Predictions
-    core_decision_consumer = triage.get_consumer_json('test_y', 'test')
+    core_decision_consumer = triage.get_consumer_json(consumer_t, 'test')
 
     triage.set_producer()
 
@@ -19,7 +19,7 @@ def triage_deployement():
         print(decision)
         if not decision:
             # Produce to layer_one_output
-            triage.producer_send('test_layer_one_output', {
+            triage.producer_send(producer_t_inside_boundary, {
                 'prediction': prediction,
                 'proabilities_benign': prob_ben,
                 'probabilities_malicious': prob_phish,
@@ -27,7 +27,7 @@ def triage_deployement():
                 'triage': 0})
         # Produce to layer_two_output
         else:
-            triage.producer_send('test_layer_two', {
+            triage.producer_send(producer_t_outside_boundary, {
                 'prediction': prediction,
                 'proabilities_benign': prob_ben,
                 'probabilities_malicious': prob_phish,
