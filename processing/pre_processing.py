@@ -20,7 +20,9 @@ class PreProcessing(Data):
 
     def extraction(self, layer):
         self.domain = str(self._data['domain'])[:-1]
-        self.layer_two_features_pre = self._data['data']
+
+        if layer == 2:
+            self.layer_two_features_pre = self._data['domain']['data']
         
         valid_domain = self._check_observation()
 

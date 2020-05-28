@@ -33,7 +33,6 @@ def layer_deploy(layer, consumer_t, producer_t):
         print(processed_data)
         processed_data_ = model.scale(processed_data)
 
-        # Layer One Predictions
         prediction, probabilities = model.prediction(processed_data_)
         print(data, prediction, probabilities)
 
